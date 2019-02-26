@@ -7,7 +7,7 @@ Server profiles aim at providing a common convention to adapt the common images 
 
 ## Layout
 ### PingFederate
-- instance
+- instance -
     Place any file that need to be present with the runtime of the product, abiding with the file layout of the product.
     - Some useful examples:
         - instance/server/default/data/drop-in-deployer/data.zip may be used to apply a configuration archive exported to a container.
@@ -20,16 +20,16 @@ Server profiles aim at providing a common convention to adapt the common images 
         apply a hivemodule configuration to the container
 
 ### PingAccess
-- instance
+- instance -
     Place any file that need to be present with the runtime of the product, abiding with the file layout of the product.
 
 ### PingDirectory
-- dsconfig
+- dsconfig -
     Provide dsconfig configuration fragments.
 When the container starts, all the fragments will be appended in the order in which they are numbered and applied in one large batch.
 Files must be named with two digits a dash, a label and with the .dsconfig extension
 
-- data
+- data -
     Provide ldif data fragments.
 When the container starts, all the provided files will be imported in the order in which they're named.
 Files must be named with two digits a dash, the backend name (the default is userRoot), a label and with the .ldif extension for plain LDIF or .ldif.gz for a gzip compressed file
@@ -50,7 +50,7 @@ For example:
         - 50-before-post-start.sh is called before the built-in postStart.sh script is executed in the background
         - 80-post-start.sh is called instead of the built-in postStart.sh script if it is provided
 
-- instance
+- instance -
     Place any file that need to be present with the runtime of the product, abiding with the file layout of the product.
     You may place custom schema in instance/config/schema/
     You may provide your certificates in a JKS keystore with these two files:
@@ -67,12 +67,12 @@ For example:
         instance/config/truststore.pin
 
 ### PingDataSync
-- dsconfig
+- dsconfig -
     Provide dsconfig configuration fragments.
 When the container starts, all the fragments will be appended in the order in which they are numbered and applied in one large batch.
 Files must be named with two digits a dash, a label and with the .dsconfig extension
         
-- instance
+- instance -
     Place any file that need to be present with the runtime of the product, abiding with the file layout of the product.
     You may place custom schema in instance/config/schema/
     You may provide your certificates in a JKS keystore with these two files:
